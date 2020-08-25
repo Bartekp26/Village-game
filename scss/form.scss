@@ -1,0 +1,54 @@
+.form_container{
+  font-family: $sansProFont;
+  background: rgb(128,244,232);
+  background: linear-gradient(145deg, rgba(128,244,232,0.6) 1%, rgba(87,184,174,0.65) 30%, rgba(40,115,107,0.65) 70%, rgba(2,59,53,0.7) 100%);
+  box-shadow: 12px 7px 15px rgba(0, 0, 0, .3),
+  8px 4px 20px rgba(0, 0, 0, .4);
+  border-radius: 15px;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  min-width: 340px;
+  min-height: 390px;
+  text-align: center;
+}
+
+.form{
+  margin: 60px 0;
+  &__input{
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto 30px auto;
+    padding: 10px;
+    &:focus{
+      outline: $basicColor solid 2px;
+      outline-offset: -2px;
+    }
+  }
+  &__submit{
+    background-color: $basicColor;
+    border: 0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    &:hover{
+      background-color: $darkenBasicColor;
+    }
+  }
+}
+
+.sign{
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  &__link{
+    color: $lightenBasicColor;
+    text-decoration: none;
+    &:hover{
+      color: $basicColor;
+    }
+  }
+}
