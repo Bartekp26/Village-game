@@ -8,7 +8,7 @@
   <body>
     <main>
         <div class="form_container">
-          <form class="form" action="login.php" method="post">
+          <form class="form" action="php/login.php" method="post">
             <input class="form__input" type="text" name="login" placeholder="Login">
             <input class="form__input" type="password" name="password" placeholder="Password">
             <input class="form__submit" type="submit" name="submit" value="Sign in">
