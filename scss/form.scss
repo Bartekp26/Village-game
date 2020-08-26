@@ -30,6 +30,7 @@
     background-color: $basicColor;
     border: 0;
     border-radius: 20px;
+    margin-bottom: 10px;
     padding: 12px 30px;
     color: white;
     letter-spacing: 1px;
@@ -37,11 +38,14 @@
     &:hover{
       background-color: $darkenBasicColor;
     }
+    &:focus{
+      outline: none !important;
+    }
   }
 }
 
 .sign{
-  padding: 5px;
+  margin: 0;
   color: white;
   font-size: 20px;
   &__link{
