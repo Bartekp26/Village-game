@@ -6,6 +6,7 @@
 <html lang="en" dir="ltr">
   <?php require "templates/head.html"; ?>
   <body>
+    <?php require "templates/header.html"; ?>
     <main>
         <div class="form_container">
           <form class="form" action="php/login.php" method="post">

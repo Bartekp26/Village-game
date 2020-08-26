@@ -5,10 +5,29 @@ body {
   background-attachment: fixed;
   background-size: cover; }
 
-.error {
-  color: red;
-  margin: 0;
-  font-size: 18px; }
+.header {
+  position: absolute;
+  top: 150px;
+  right: 300px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white; }
+  .header__title {
+    color: white;
+    text-align: center;
+    font-size: 76px;
+    letter-spacing: 3px;
+    margin: 0;
+    margin-bottom: 40px; }
+  .header__description {
+    margin: 0;
+    color: #57b8ae;
+    font-family: "Roboto", sans-serif;
+    font-size: 32px;
+    letter-spacing: 1px;
+    line-height: 1.45; }
+    .header__description--center {
+      display: block;
+      text-align: center; }
 
 .form_container {
   font-family: "Source Sans Pro", sans-serif;
@@ -57,3 +76,8 @@ body {
     text-decoration: none; }
     .sign__link:hover {
       color: #57b8ae; }
+
+.error {
+  color: red;
+  margin: 0;
+  font-size: 18px; }
