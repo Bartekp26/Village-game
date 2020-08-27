@@ -22,6 +22,8 @@
         </div>
     </main>
 
+    <?php require "templates/foot.html"; ?>
+
     <script src="index.js" charset="utf-8"></script>
   </body>
 </html>

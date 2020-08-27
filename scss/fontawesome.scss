@@ -1,0 +1,12 @@
+.socialIcons{
+  margin-left: 15px;
+  font-size: 30px;
+  &__link{
+    margin: 5px 10px;
+    color: $evenDarkenBasicColor;
+    text-decoration: none;
+    &:hover{
+      color: rgba(0,0,0,.9);
+    }
+  }
+}

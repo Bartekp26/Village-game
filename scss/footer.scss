@@ -1,0 +1,19 @@
+.footer{
+  background: rgb(2,59,53);
+  background: linear-gradient(90deg, rgba(2,59,53,0.75) 0%, rgba(41,116,108,0.8) 35%, rgba(84,179,169,0.8) 65%, rgba(128,244,232,0.75) 100%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text{
+    margin: 0;
+    padding: 12px;
+    color: white;
+    font-size: 20px;
+    font-family: $sansProFont;
+  }
+}
