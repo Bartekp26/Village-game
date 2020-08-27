@@ -5,6 +5,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <?php require "templates/head.html"; ?>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
   <body>
     <?php require "templates/header.html"; ?>
     <main>
@@ -23,7 +25,4 @@
     </main>
 
     <?php require "templates/foot.html"; ?>
-
-    <script src="index.js" charset="utf-8"></script>
-  </body>
 </html>
