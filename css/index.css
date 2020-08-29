@@ -96,6 +96,7 @@ body {
 
 .sign {
   margin: 0;
+  margin-bottom: 25px;
   color: white;
   font-size: 20px; }
   .sign__link {

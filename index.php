@@ -20,7 +20,7 @@
               unset($_SESSION["incorrect"]);} ?>
             </p>
           </form>
-          <p class="sign">Don't have an account? <a class="sign__link" href="#">Sign up</a></p>
+          <p class="sign">Don't have an account? <a class="sign__link" href="php/registration.php">Sign up</a></p>
         </div>
     </main>
 
