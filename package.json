@@ -1,0 +1,22 @@
+{
+  "name": "village-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass scss -o css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bartekp26/Village-game.git"
+  },
+  "author": "Bartek Płaniak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bartekp26/Village-game/issues"
+  },
+  "homepage": "https://github.com/Bartekp26/Village-game#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
