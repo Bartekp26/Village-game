@@ -11,9 +11,7 @@
     $stmt->execute(array($username));
     $user = $stmt->fetch();
 
-  // CHANGE TO PASSWORD_VERIFY INSTEAD OF === 
-
-    if($user && $password === $user["password"]){
+    if($user && password_verify($password, $user['password'])){
       $_SESSION["logged"] = true;
       unset($_SESSION["incorrect"]);
       header("Location: game.php");

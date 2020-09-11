@@ -51,7 +51,7 @@
       require "phpmysqlconnect.php";
 
       $query = "INSERT INTO users (username,email,password) VALUES (?,?,?)";
-      $stmt = $pdo->prepare($query)->execute([$username,$email,$password]);
+      $stmt = $pdo->prepare($query)->execute([$username,$email,$hashedPassword]);
 
       header("Location: ../index.php");
     }
