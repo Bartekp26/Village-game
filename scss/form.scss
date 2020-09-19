@@ -57,3 +57,36 @@
     }
   }
 }
+
+@media only screen and (max-width: 970px){
+  .form_container{
+    margin: 120px auto 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 320px;
+    min-width: 270px;
+    min-height: 300px;
+    text-align: center;
+  }
+  .form{
+    margin: 35px 0 20px;
+    &__submit{
+      margin-bottom: 5px;
+    }
+  }
+  .sign{
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 660px){
+  .form_container{
+    margin: 130px auto 0 auto;
+  }
+  .form{
+    margin: 25px 0 15px;
+  }
+  .sign{
+    margin-bottom: 13px;
+  }
+}

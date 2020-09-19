@@ -4,7 +4,7 @@
   right: 300px;
   font-family: $sansProFont;
   color: white;
-
+  
   &__title{
     color: white;
     text-align: center;
@@ -23,6 +23,51 @@
     &--center{
       display: block;
       text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 1450px){
+  .header{
+    right: 180px;
+    &__title{
+      font-size: 68px;
+    }
+    &__description{
+      font-size: 28px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px){
+  .header{
+    right: 110px;
+    &__title{
+      font-size: 53px;
+    }
+    &__description{
+      font-size: 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 970px){
+  .header{
+    position: static;
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 520px){
+  .header{
+    margin-top: 40px;
+    &__title{
+      font-size: 46px;
+      margin-bottom: 25px;
+    }
+    &__description{
+      font-size: 20px;
     }
   }
 }

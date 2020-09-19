@@ -17,3 +17,19 @@
     font-family: $sansProFont;
   }
 }
+
+@media only screen and (max-width: 660px){
+  .footer__text{
+    font-size: 16px;
+  }
+  .socialIcons{
+    margin-left: 0;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 520px){
+  .footer{
+    display: none;
+  }
+}

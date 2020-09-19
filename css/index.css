@@ -39,6 +39,39 @@ body {
       display: block;
       text-align: center; }
 
+@media only screen and (max-width: 1450px) {
+  .header {
+    right: 180px; }
+    .header__title {
+      font-size: 68px; }
+    .header__description {
+      font-size: 28px; } }
+
+@media only screen and (max-width: 1150px) {
+  .header {
+    right: 110px; }
+    .header__title {
+      font-size: 53px; }
+    .header__description {
+      font-size: 24px; } }
+
+@media only screen and (max-width: 970px) {
+  .header {
+    position: static;
+    margin-top: 50px;
+    text-align: center; } }
+
+@media only screen and (max-width: 520px) {
+  .header {
+    position: static;
+    margin-top: 40px;
+    text-align: center; }
+    .header__title {
+      font-size: 46px;
+      margin-bottom: 25px; }
+    .header__description {
+      font-size: 20px; } }
+
 .footer {
   background: #023b35;
   background: linear-gradient(90deg, rgba(2, 59, 53, 0.75) 0%, rgba(41, 116, 108, 0.8) 35%, rgba(84, 179, 169, 0.8) 65%, rgba(128, 244, 232, 0.75) 100%);
@@ -55,6 +88,17 @@ body {
     color: white;
     font-size: 20px;
     font-family: "Source Sans Pro", sans-serif; }
+
+@media only screen and (max-width: 660px) {
+  .footer__text {
+    font-size: 16px; }
+  .socialIcons {
+    margin-left: 0;
+    font-size: 20px; } }
+
+@media only screen and (max-width: 520px) {
+  .footer {
+    display: none; } }
 
 .form_container {
   font-family: "Source Sans Pro", sans-serif;
@@ -104,6 +148,35 @@ body {
     text-decoration: none; }
     .sign__link:hover {
       color: #57b8ae; }
+
+@media only screen and (max-width: 970px) {
+  .form_container {
+    margin: 120px auto 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 320px;
+    min-width: 270px;
+    min-height: 300px;
+    text-align: center; }
+  .form {
+    margin: 35px 0 20px; }
+    .form__submit {
+      margin-bottom: 5px; }
+  .sign {
+    margin-bottom: 15px; } }
+
+@media only screen and (max-width: 660px) {
+  .form_container {
+    margin: 130px auto 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 320px;
+    min-width: 270px;
+    text-align: center; }
+  .form {
+    margin: 25px 0 15px; }
+  .sign {
+    margin-bottom: 13px; } }
 
 .error {
   color: red;
