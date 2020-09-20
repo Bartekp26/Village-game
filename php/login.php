@@ -6,13 +6,14 @@
     $username = filter_input(INPUT_POST, "username");
     $password = filter_input(INPUT_POST, "password");
 
-    $query = "SELECT password FROM users WHERE username = ?";
+    $query = "SELECT id,password FROM users WHERE username = ?";
     $stmt = $pdo->prepare($query);
     $stmt->execute(array($username));
     $user = $stmt->fetch();
 
     if($user && password_verify($password, $user['password'])){
       $_SESSION["logged"] = true;
+      $_SESSION["id"] = $user["id"];
       unset($_SESSION["incorrect"]);
       header("Location: game.php");
     } else {
