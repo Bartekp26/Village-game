@@ -1,0 +1,44 @@
+.menu{
+  font-family: $sansProFont;
+  box-sizing: border-box;
+  background-color: $evenDarkenBasicColor;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 25px;
+
+  &__list{
+    display: flex;
+    min-width: 175px;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+
+  &__item{
+    font-size: 20px;
+  }
+
+  &__logout{
+    background-color: $basicColor;
+    font-size: 18px;
+    border: 0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    color: white;
+    letter-spacing: 1px;
+    cursor: pointer;
+    &:hover{
+      background-color: $lightenBasicColor;
+    }
+    &:focus{
+      outline: none !important;
+    }
+  }
+}
+
+.logo{
+  font-size: 26px;
+  margin: 20px 0;
+}
