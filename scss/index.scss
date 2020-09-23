@@ -3,7 +3,9 @@
 @import "variables";
 @import "fontawesome";
 @import "body";
-@import "header";
 @import "footer";
-@import "form";
-@import "error";
+@import "./login/error";
+@import "./login/header";
+@import "./login/form";
+@import "./game/menu";
+@import "./game/materials.scss";
