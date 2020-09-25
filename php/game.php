@@ -22,7 +22,9 @@
         <li class="menu__item">Home</li>
         <li class="menu__item">Town hall</li>
       </ul>
-      <button class="menu__logout">Log out</button>
+      <form action="logout.php">
+        <button type="submit" class="menu__logout">Log out</button>
+      </form>
     </div>
   </nav>
   <div class="materials">
