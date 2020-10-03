@@ -19,8 +19,17 @@
     <div class="menu">
       <h3 class="logo">Village Game</h2>
       <ul class="menu__list">
-        <li class="menu__item">Home</li>
-        <li class="menu__item">Town hall</li>
+        <?php
+          $currentPage = basename($_SERVER['SCRIPT_FILENAME']);
+          $menuList=array(
+            'Home' => 'game.php',
+            'Town hall' => 'townhall.php',
+          );   
+      
+          foreach ($menuList as $title => $url) {
+            echo "<li class='menu__item'><a href='{$url}'", ($currentPage==$url) ? "class='active'" : "", ">{$title}</a></li>";
+          }
+        ?>
       </ul>
       <form action="logout.php">
         <button type="submit" class="menu__logout">Log out</button>

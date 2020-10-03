@@ -14,10 +14,27 @@
     min-width: 175px;
     justify-content: space-between;
     list-style-type: none;
+    padding: 0;
   }
 
   &__item{
     font-size: 20px;
+    a{
+      color: white;
+      text-decoration: none;
+      &:hover{
+        color: $basicColor;
+      }
+
+      &.active{
+        cursor: default;
+        pointer-events: none;
+        border-bottom: 3px $basicColor solid;
+        &:hover{
+          color: inherit;
+        }
+      }
+    }
   }
 
   &__logout{
