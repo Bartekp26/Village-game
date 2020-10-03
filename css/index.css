@@ -24,7 +24,8 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 1; }
   .footer__text {
     margin: 0;
     padding: 12px;
@@ -222,3 +223,33 @@ body {
 .logo {
   font-size: 26px;
   margin: 20px 0; }
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/background.png"); }
+
+.townhall {
+  margin: 0 auto;
+  max-width: 700px;
+  min-height: 90vh;
+  background-color: #28736b;
+  opacity: 0.8;
+  font-family: "Source Sans Pro", sans-serif;
+  border-right: 1px #80f4e8 solid;
+  border-left: 1px #80f4e8 solid;
+  color: white; }
+  .townhall__title {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    color: white;
+    font-size: 32px;
+    letter-spacing: 1px;
+    border-bottom: 4px #80f4e8 dotted; }
+
+.buildings_container {
+  margin: 20px 40px;
+  font-family: "Roboto", sans-serif; }
+
+.building__title {
+  font-size: 18px;
+  font-weight: 700; }
