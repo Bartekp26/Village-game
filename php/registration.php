@@ -53,6 +53,14 @@
       $query = "INSERT INTO users (username,email,password) VALUES (?,?,?)";
       $stmt = $pdo->prepare($query)->execute([$username,$email,$hashedPassword]);
 
+      $query2 = "SELECT id FROM users WHERE username = ?";
+      $stmt = $pdo->prepare($query2);
+      $stmt->execute([$username]);
+      $user = $stmt->fetch();
+
+      $query3 = "INSERT INTO villages (owner_id, wood, stone, clay, town_hall, sawmill, stone_mine, clay_mine) VALUES ({$user['id']}, 500, 500, 500, 1, 1, 1, 1)";
+      $stmt = $pdo->prepare($query3)->execute();
+
       header("Location: ../index.php");
     }
   }
