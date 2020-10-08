@@ -2,7 +2,7 @@
   session_start();
 
   if($_SESSION["logged"]){
-    //echo 1;
+    $user_id = $_SESSION["id"];
   } else {
     header("Location: ../index.php");
   }
@@ -36,10 +36,19 @@
       </form>
     </div>
   </nav>
-  <div class="materials">
-    <div class="wood"></div>
-    <div class="stone"></div>
-    <div class="clay"></div>
+  <div class="minerals">
+    <?php
+        require "phpmysqlconnect.php";
+
+        $query = "SELECT wood, stone, clay FROM villages WHERE owner_id = $user_id";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute();
+        $minerals = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        foreach($minerals as $mineral => $amount){
+          echo "<div class='mineral'>$amount <img class='$mineral mineral__icon' src='../assets/icons/$mineral.png'/></div>";
+        }
+      ?>
   </div>
 
   <?php require "../templates/foot.html"; ?>

@@ -1,0 +1,22 @@
+.minerals {
+  background-color: #57b8ae;
+  position: absolute;
+  right: 0;
+  min-width: 100px;
+  padding: 20px 20px;
+  border-bottom-left-radius: 20px;
+  color: black;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700; }
+
+.mineral{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 35px;
+
+  &__icon{
+    width: 22px;
+  }
+}
