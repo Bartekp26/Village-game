@@ -2,13 +2,46 @@
 <div class="townhall">
   <h2 class="townhall__title">Town hall</h2>
   <div class="buildings_container">
-    <div class="building">
-      <div class="building__title">Sawmill</div>
-      <div class="building__costs">
-        <div class="building__cost"></div>
-        <div class="building__cost"></div>
-        <div class="building__cost"></div>
-      </div>
-    </div>
+    <?php   
+      require "phpmysqlconnect.php";
+
+      $query = "SELECT town_hall,sawmill,stone_mine,clay_mine FROM villages WHERE owner_id = $user_id";
+      $stmt = $pdo->prepare($query);
+      $stmt->execute();
+      $levels = $stmt->fetch(PDO::FETCH_ASSOC);
+
+      $query2 = "SELECT cost FROM mines_costs";
+      $stmt2 = $pdo->prepare($query2);
+      $stmt2->execute();
+      $costs = $stmt2->fetchall(PDO::FETCH_NUM);
+
+      // Check if user have enough minerals to buy
+      $query3 = "SELECT wood, stone, clay FROM villages WHERE owner_id = $user_id";
+      $stmt3 = $pdo->prepare($query3);
+      $stmt3->execute();
+      $minerals = $stmt3->fetch(PDO::FETCH_ASSOC);
+          
+      foreach($levels as $building => $level){
+        $cost = $costs[$level][0];
+        $level++;
+
+        echo "<div class='building'>
+                <div class='building__title'>".ucfirst($building)."</div>
+                <div class='building__level'>$level lvl</div>
+                <div class='building__cost mineral'>$cost 
+                  <img class='mineral__icon mineral__icon--margin' src='../assets/icons/wood.png'/>
+                  <img class='mineral__icon mineral__icon--margin' src='../assets/icons/stone.png'/>
+                  <img class='mineral__icon mineral__icon--margin' src='../assets/icons/clay.png'/>
+                </div>
+                <form action='buy.php' method='post'>";
+
+        if(($cost <= $minerals["wood"]) && ($cost <= $minerals["stone"]) && ($cost <= $minerals["clay"])){
+          echo "<button class='building__button'>Buy</button>";
+        } else {
+          echo "<button class='building__button building__button--not-available'>Buy</button>";
+        }
+        echo "</form></div>";
+      }
+    ?>
   </div>  
 </div>

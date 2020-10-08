@@ -10,7 +10,7 @@
       color: rgba(0, 0, 0, 0.9); }
 
 body {
-  background: url("../img/background.png");
+  background: url("../assets/img/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover; }
@@ -224,12 +224,34 @@ body {
   font-size: 26px;
   margin: 20px 0; }
 
+.minerals {
+  background-color: #57b8ae;
+  position: absolute;
+  right: 0;
+  min-width: 100px;
+  padding: 20px 20px;
+  border-bottom-left-radius: 20px;
+  color: black;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700; }
+
+.mineral {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 35px; }
+  .mineral__icon {
+    width: 22px; }
+    .mineral__icon--margin {
+      margin-left: 7px; }
+
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/background.png"); }
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/img/background.png"); }
 
 .townhall {
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 750px;
   min-height: 90vh;
   background-color: #28736b;
   opacity: 0.8;
@@ -247,9 +269,41 @@ body {
     border-bottom: 4px #80f4e8 dotted; }
 
 .buildings_container {
-  margin: 20px 40px;
+  margin: 30px 70px;
   font-family: "Roboto", sans-serif; }
 
-.building__title {
-  font-size: 18px;
-  font-weight: 700; }
+.building {
+  padding: 35px 30px;
+  display: flex;
+  justify-content: space-between;
+  justify-self: center;
+  align-items: center; }
+  .building__title {
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 110px; }
+  .building__cost {
+    min-width: 125px; }
+  .building__button {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer; }
+    .building__button--not-available {
+      position: relative;
+      cursor: default;
+      background-color: lightgrey;
+      color: red; }
+      .building__button--not-available:hover::after {
+        content: "You don't have enought materials";
+        position: absolute;
+        color: red;
+        right: -80px;
+        top: -10px;
+        font-size: 14px;
+        max-width: 80px; }
+    .building__button:focus {
+      outline: none; }

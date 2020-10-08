@@ -1,10 +1,10 @@
 body{
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/background.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/img/background.png");
 }
 
 .townhall{
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 750px;
   min-height: 90vh;
   background-color: $darkenBasicColor;
   opacity: 0.8;
@@ -26,21 +26,52 @@ body{
 }
 
 .buildings_container{
-  margin: 20px 40px;
+  margin: 30px 70px;
   font-family: $robotoFont;
 }
 
 .building{
-
+  padding: 35px 30px;
+  display: flex;
+  justify-content: space-between;
+  justify-self: center;
+  align-items: center;
 
   &__title{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-  }
-  &__costs{
-
+    min-width: 110px;
   }
   &__cost{
+    min-width: 125px;
+  }
+  &__button{
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    border: 0;
+    border-radius: 15px;
+    cursor: pointer;
     
+    &--not-available{
+      position: relative;
+      cursor: default;
+      background-color: lightgrey;
+      color: red;
+
+      &:hover::after{
+        content: "You don't have enought materials";
+        position: absolute;
+        color: red;
+        right: -80px;
+        top: -10px;
+        font-size: 14px;
+        max-width: 80px;
+      }
+    }
+    &:focus{
+      outline: none;
+    }  
   }
 }
