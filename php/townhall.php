@@ -32,15 +32,14 @@
                   <img class='mineral__icon mineral__icon--margin' src='../assets/icons/wood.png'/>
                   <img class='mineral__icon mineral__icon--margin' src='../assets/icons/stone.png'/>
                   <img class='mineral__icon mineral__icon--margin' src='../assets/icons/clay.png'/>
-                </div>
-                <form action='buy.php' method='post'>";
+                </div>";
 
         if(($cost <= $minerals["wood"]) && ($cost <= $minerals["stone"]) && ($cost <= $minerals["clay"])){
-          echo "<button class='building__button'>Buy</button>";
+          echo "<a href='buy.php?building=$building' class='building__button'>Buy</a>";
         } else {
-          echo "<button class='building__button building__button--not-available'>Buy</button>";
+          echo "<a href='buy.php?building=$building' class='building__button building__button--not-available'>Buy</a>";
         }
-        echo "</form></div>";
+        echo "</div>";
       }
     ?>
   </div>  

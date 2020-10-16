@@ -53,11 +53,13 @@ body{
     border: 0;
     border-radius: 15px;
     cursor: pointer;
+    background-color: lightgray;
+    color: black;
+    text-decoration: none;
     
     &--not-available{
       position: relative;
       cursor: default;
-      background-color: lightgrey;
       color: red;
 
       &:hover::after{

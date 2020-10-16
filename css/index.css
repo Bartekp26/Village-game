@@ -291,11 +291,13 @@ body {
     padding: 10px 25px;
     border: 0;
     border-radius: 15px;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+    text-decoration: none; }
     .building__button--not-available {
       position: relative;
       cursor: default;
-      background-color: lightgrey;
       color: red; }
       .building__button--not-available:hover::after {
         content: "You don't have enought materials";
