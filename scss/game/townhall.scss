@@ -61,12 +61,12 @@ body{
       position: relative;
       cursor: default;
       color: red;
+      background-color: darkgray;
 
       &:hover::after{
         content: "You don't have enought materials";
         position: absolute;
-        color: red;
-        right: -80px;
+        right: -90px;
         top: -10px;
         font-size: 14px;
         max-width: 80px;
