@@ -32,6 +32,7 @@ body{
 
 .building{
   padding: 35px 30px;
+  position: relative;
   display: flex;
   justify-content: space-between;
   justify-self: center;
@@ -64,7 +65,7 @@ body{
       background-color: darkgray;
 
       &:hover::after{
-        content: "You don't have enought materials";
+        content: "You don't have enought minerals";
         position: absolute;
         right: -90px;
         top: -10px;
@@ -75,5 +76,14 @@ body{
     &:focus{
       outline: none;
     }  
+  }
+  &__error{
+    position: absolute;
+    display: block;
+    font-size: 20px;
+    font-family: $sansProFont;
+    color: red;
+    top: 85px;
+    left: 25%;
   }
 }

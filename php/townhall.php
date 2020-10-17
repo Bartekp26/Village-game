@@ -39,7 +39,13 @@
         } else {
           echo "<a href='buy.php?building=$building' class='building__button building__button--not-available'>Buy</a>";
         }
+
+        if(isset($_SESSION[$building."-error"])){
+          echo "<div class='building__error'>{$_SESSION[$building.'-error']}</div>";
+        }
         echo "</div>";
+
+        unset($_SESSION["$building-error"]);
       }
     ?>
   </div>  

@@ -38,7 +38,7 @@
 
         header("Location: townhall.php");
       } else {
-        $_SESSION["$building-error"] = "You don't have enough minerals!";
+        $_SESSION["$building-error"] = "You can't buy $building to $next_level level";
         header("Location: townhall.php");
       }
     } else header("Location: townhall.php");
