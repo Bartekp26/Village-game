@@ -10,7 +10,7 @@
       $stmt->execute();
       $levels = $stmt->fetch(PDO::FETCH_ASSOC);
 
-      $query2 = "SELECT cost FROM mines_costs";
+      $query2 = "SELECT cost FROM buildings_costs";
       $stmt2 = $pdo->prepare($query2);
       $stmt2->execute();
       $costs = $stmt2->fetchall(PDO::FETCH_NUM);

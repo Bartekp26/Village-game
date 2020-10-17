@@ -19,7 +19,7 @@
       $actual_level = $actual_level[$building];
       $next_level = $actual_level + 1;
 
-      $query3 = "SELECT cost FROM mines_costs WHERE lvl = $next_level";
+      $query3 = "SELECT cost FROM buildings_costs WHERE lvl = $next_level";
       $stmt3 = $pdo->prepare($query3);
       $stmt3->execute();
       $cost = $stmt3->fetch();
