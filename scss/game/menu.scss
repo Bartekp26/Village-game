@@ -11,7 +11,7 @@
 
   &__list{
     display: flex;
-    min-width: 175px;
+    min-width: 350px;
     justify-content: space-between;
     list-style-type: none;
     padding: 0;
@@ -58,4 +58,55 @@
 .logo{
   font-size: 26px;
   margin: 20px 0;
+}
+
+.toggle-menu-button{
+  font-size: 32px;
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 970px){
+  .menu{
+    padding: 0 20px;
+
+    &__list{
+      min-width: 275px;
+    }
+    &__item{
+      font-size: 18px;
+    }
+    &__logout{
+      font-size: 16px;
+      padding: 10px 24px;
+    }
+  }
+  .logo{
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 660px){
+  .menu{
+    padding: 0 20px;
+
+    &__list{
+      min-width: 275px;
+      display: none;
+    }
+    &__item{
+      font-size: 18px;
+    }
+    &__logout{
+      font-size: 16px;
+      padding: 10px 24px;
+      display: none;
+    }
+  }
+  .logo{
+    font-size: 24px;
+  }
+  .toggle-menu-button{
+    display: inline;
+  }
 }

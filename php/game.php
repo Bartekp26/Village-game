@@ -24,6 +24,7 @@
           $menuList=array(
             'Home' => 'game.php',
             'Town hall' => 'townhall.php',
+            'About' => 'about.php',
           );   
       
           foreach ($menuList as $title => $url) {
@@ -34,6 +35,7 @@
       <form action="logout.php" method="post">
         <button type="submit" class="menu__logout">Log out</button>
       </form>
+      <div class="toggle-menu-button"><i class="fas fa-bars"></i></div>
     </div>
   </nav>
   <div class="minerals">
