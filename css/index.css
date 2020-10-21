@@ -264,7 +264,7 @@ body {
   position: absolute;
   right: 0;
   min-width: 100px;
-  padding: 20px 20px;
+  padding: 20px;
   border-bottom-left-radius: 20px;
   color: black;
   font-size: 24px;
@@ -280,6 +280,26 @@ body {
     width: 22px; }
     .mineral__icon--margin {
       margin-left: 7px; }
+
+@media only screen and (max-width: 1150px) {
+  .minerals {
+    font-size: 18px;
+    padding: 10px;
+    min-width: 90px; }
+  .mineral__icon {
+    width: 20px; }
+    .mineral__icon--margin {
+      margin-left: 5px; } }
+
+@media only screen and (max-width: 970px) {
+  .minerals {
+    font-size: 18px;
+    padding: 10px;
+    min-width: 90px; }
+  .mineral__icon {
+    width: 20px; }
+    .mineral__icon--margin {
+      margin-left: 5px; } }
 
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/img/background.png"); }
@@ -353,3 +373,29 @@ body {
     color: red;
     top: 85px;
     left: 25%; }
+
+@media only screen and (max-width: 1150px) {
+  .townhall {
+    max-width: 600px; }
+    .townhall__title {
+      font-size: 28px;
+      padding: 16px;
+      border-bottom-width: 3px; }
+  .buildings_container {
+    margin: 12px 28px; }
+  .building {
+    padding: 30px 25px; }
+    .building__title {
+      font-size: 18px;
+      min-width: 100px; }
+    .building__cost {
+      min-width: 110px; }
+    .building__button {
+      font-size: 16px;
+      padding: 8px 22px; }
+      .building__button--not-available:hover::after {
+        font-size: 12px;
+        right: -85px; }
+    .building__error {
+      font-size: 18px;
+      top: 75px; } }

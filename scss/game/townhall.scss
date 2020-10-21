@@ -87,3 +87,43 @@ body{
     left: 25%;
   }
 }
+
+@media only screen and (max-width: 1150px){
+  .townhall{
+    max-width: 600px;
+    
+    &__title{
+      font-size: 28px;
+      padding: 16px;
+      border-bottom-width: 3px;
+    }
+  }
+
+  .buildings_container{
+    margin: 12px 28px;
+  }
+
+  .building{
+    padding: 30px 25px;
+    &__title{
+      font-size: 18px;
+      min-width: 100px;
+    }
+    &__cost{
+      min-width: 110px;
+    }
+    &__button{
+      font-size: 16px;
+      padding: 8px 22px;
+
+      &--not-available:hover::after{
+        font-size: 12px;
+        right: -85px;
+      }
+    }
+    &__error{
+      font-size: 18px;
+      top: 75px;
+    }
+  }
+}

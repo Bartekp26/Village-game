@@ -3,7 +3,7 @@
   position: absolute;
   right: 0;
   min-width: 100px;
-  padding: 20px 20px;
+  padding: 20px;
   border-bottom-left-radius: 20px;
   color: black;
   font-size: 24px;
@@ -21,6 +21,34 @@
 
     &--margin{
       margin-left: 7px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px){
+  .minerals{
+    font-size: 18px;
+    padding: 10px;
+    min-width: 90px;
+  }
+  .mineral__icon{
+    width: 20px;
+    &--margin{
+      margin-left: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 970px){
+  .minerals{
+    font-size: 18px;
+    padding: 10px;
+    min-width: 90px;
+  }
+  .mineral__icon{
+    width: 20px;
+    &--margin{
+      margin-left: 5px;
     }
   }
 }
