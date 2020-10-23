@@ -41,14 +41,6 @@
 
 @media only screen and (max-width: 970px){
   .minerals{
-    font-size: 18px;
-    padding: 10px;
-    min-width: 90px;
-  }
-  .mineral__icon{
-    width: 20px;
-    &--margin{
-      margin-left: 5px;
-    }
+    display: none;
   }
 }

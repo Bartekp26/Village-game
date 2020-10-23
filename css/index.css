@@ -13,7 +13,8 @@ body {
   background: url("../assets/img/background.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
 
 .footer {
   background: #023b35;
@@ -187,6 +188,9 @@ body {
   align-items: center;
   color: white;
   padding: 0 25px; }
+  .menu__logo {
+    font-size: 26px;
+    margin: 20px 0; }
   .menu__list {
     display: flex;
     min-width: 350px;
@@ -215,49 +219,63 @@ body {
     color: white;
     letter-spacing: 1px;
     cursor: pointer; }
+    .menu__logout--toggle {
+      display: none; }
     .menu__logout:hover {
       background-color: #80f4e8; }
     .menu__logout:focus {
       outline: none !important; }
 
-.logo {
-  font-size: 26px;
-  margin: 20px 0; }
-
-.toggle-menu-button {
+.toggle-menu {
   font-size: 32px;
-  display: none;
-  cursor: pointer; }
+  display: none; }
+
+#toggle-menu {
+  display: none; }
 
 @media only screen and (max-width: 970px) {
   .menu {
     padding: 0 20px; }
+    .menu__logo {
+      font-size: 24px; }
     .menu__list {
       min-width: 275px; }
     .menu__item {
       font-size: 18px; }
     .menu__logout {
       font-size: 16px;
-      padding: 10px 24px; }
-  .logo {
-    font-size: 24px; } }
+      padding: 10px 24px; } }
 
 @media only screen and (max-width: 660px) {
   .menu {
     padding: 0 20px; }
     .menu__list {
-      min-width: 275px;
-      display: none; }
+      display: none;
+      position: fixed;
+      text-align: center;
+      min-width: 225px;
+      padding: 15px 0;
+      background-color: #023b35;
+      border-top: 3px solid #57b8ae;
+      border-radius: 0 0 25px 25px;
+      right: 0px;
+      top: 50px;
+      z-index: 3; }
     .menu__item {
-      font-size: 18px; }
-    .menu__logout {
-      font-size: 16px;
-      padding: 10px 24px;
+      display: block;
+      padding: 15px 0; }
+    .menu__logout-form {
       display: none; }
-  .logo {
-    font-size: 24px; }
-  .toggle-menu-button {
-    display: inline; } }
+    .menu__logout--toggle {
+      display: inline;
+      font-size: 18px;
+      padding: 12px 30px;
+      margin: 15px 0; }
+  .toggle-menu {
+    display: inline;
+    cursor: pointer; }
+  #toggle-menu:checked + .menu__list {
+    display: block; } }
 
 .minerals {
   background-color: #57b8ae;
@@ -293,13 +311,7 @@ body {
 
 @media only screen and (max-width: 970px) {
   .minerals {
-    font-size: 18px;
-    padding: 10px;
-    min-width: 90px; }
-  .mineral__icon {
-    width: 20px; }
-    .mineral__icon--margin {
-      margin-left: 5px; } }
+    display: none; } }
 
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/img/background.png"); }
@@ -307,7 +319,7 @@ body {
 .townhall {
   margin: 0 auto;
   max-width: 750px;
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: #28736b;
   opacity: 0.8;
   font-family: "Source Sans Pro", sans-serif;
@@ -382,20 +394,40 @@ body {
       padding: 16px;
       border-bottom-width: 3px; }
   .buildings_container {
-    margin: 12px 28px; }
-  .building {
-    padding: 30px 25px; }
-    .building__title {
-      font-size: 18px;
-      min-width: 100px; }
-    .building__cost {
-      min-width: 110px; }
-    .building__button {
-      font-size: 16px;
-      padding: 8px 22px; }
-      .building__button--not-available:hover::after {
-        font-size: 12px;
-        right: -85px; }
-    .building__error {
-      font-size: 18px;
-      top: 75px; } }
+    margin: 12px 40px; }
+  .building__title {
+    font-size: 18px;
+    min-width: 100px; }
+  .building__cost {
+    min-width: 110px; }
+  .building__button {
+    font-size: 16px;
+    padding: 8px 22px; }
+    .building__button--not-available:hover::after {
+      font-size: 12px;
+      right: -85px; }
+  .building__error {
+    font-size: 18px;
+    top: 75px; } }
+
+@media only screen and (max-width: 660px) {
+  .townhall {
+    max-width: 100vw;
+    border: 0; } }
+
+@media only screen and (max-width: 520px) {
+  .buildings_container {
+    margin: 0; }
+  .building__title {
+    font-size: 16px;
+    min-width: 85px; }
+  .building__cost {
+    min-width: auto; }
+  .building__button {
+    font-size: 14px;
+    padding: 8px 20px; }
+    .building__button--not-available:hover::after {
+      display: none; }
+  .building__error {
+    font-size: 18px;
+    top: 75px; } }

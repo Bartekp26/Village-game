@@ -17,7 +17,9 @@
 <body>
   <nav class="navigation">
     <div class="menu">
-      <h3 class="logo">Village Game</h2>
+      <h3 class="menu__logo">Village Game</h2>
+      <label for="toggle-menu" class="toggle-menu">&#9776;</label>
+      <input type="checkbox" id="toggle-menu">
       <ul class="menu__list">
         <?php
           $currentPage = basename($_SERVER['SCRIPT_FILENAME']);
@@ -31,26 +33,28 @@
             echo "<li class='menu__item'><a href='{$url}'", ($currentPage==$url) ? "class='active'" : "", ">{$title}</a></li>";
           }
         ?>
+        <form action="logout.php" method="post">
+          <button type="submit" class="menu__logout menu__logout--toggle">Log out</button>
+        </form>
       </ul>
-      <form action="logout.php" method="post">
+      <form action="logout.php" method="post" class="menu__logout-form">
         <button type="submit" class="menu__logout">Log out</button>
       </form>
-      <div class="toggle-menu-button"><i class="fas fa-bars"></i></div>
     </div>
   </nav>
   <div class="minerals">
     <?php
-        require "phpmysqlconnect.php";
+      require "phpmysqlconnect.php";
 
-        $query = "SELECT wood, stone, clay FROM villages WHERE owner_id = $user_id";
-        $stmt = $pdo->prepare($query);
-        $stmt->execute();
-        $minerals = $stmt->fetch(PDO::FETCH_ASSOC);
+      $query = "SELECT wood, stone, clay FROM villages WHERE owner_id = $user_id";
+      $stmt = $pdo->prepare($query);
+      $stmt->execute();
+      $minerals = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        foreach($minerals as $mineral => $amount){
-          echo "<div class='mineral'>$amount <img class='$mineral mineral__icon' src='../assets/icons/$mineral.png'/></div>";
-        }
-      ?>
+      foreach($minerals as $mineral => $amount){
+        echo "<div class='mineral'>$amount <img class='$mineral mineral__icon' src='../assets/icons/$mineral.png'/></div>";
+      }
+    ?>
   </div>
 
   <?php require "../templates/foot.html"; ?>
