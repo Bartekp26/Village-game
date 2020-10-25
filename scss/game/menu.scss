@@ -9,9 +9,13 @@
   color: white;
   padding: 0 25px;
 
+  &__logo{
+    font-size: 26px;
+    margin: 20px 0;
+  }
   &__list{
     display: flex;
-    min-width: 175px;
+    min-width: 350px;
     justify-content: space-between;
     list-style-type: none;
     padding: 0;
@@ -46,6 +50,10 @@
     color: white;
     letter-spacing: 1px;
     cursor: pointer;
+
+    &--toggle{
+      display: none;
+    }
     &:hover{
       background-color: $lightenBasicColor;
     }
@@ -55,7 +63,70 @@
   }
 }
 
-.logo{
-  font-size: 26px;
-  margin: 20px 0;
+.toggle-menu{
+  font-size: 32px;
+  display: none;
+}
+#toggle-menu{
+  display: none;
+}
+
+@media only screen and (max-width: 970px){
+  .menu{
+    padding: 0 20px;
+    
+    &__logo{
+      font-size: 24px;
+    }
+    &__list{
+      min-width: 275px;
+    }
+    &__item{
+      font-size: 18px;
+    }
+    &__logout{
+      font-size: 16px;
+      padding: 10px 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 660px){
+  .menu{
+    padding: 0 20px;
+
+    &__list{
+      display: none;
+      position: fixed;
+      text-align: center;
+      min-width: 225px;
+      padding: 15px 0;
+      background-color: $evenDarkenBasicColor;
+      border-top: 3px solid $basicColor;
+      border-radius: 0 0 25px 25px;
+      right: 0px;
+      top: 50px;
+      z-index: 3;
+    }
+    &__item{
+      display: block;
+      padding: 15px 0;
+    }
+    &__logout-form{
+      display: none
+    }
+    &__logout--toggle{
+      display: inline;
+      font-size: 18px;
+      padding: 12px 30px;
+      margin: 15px 0;
+    }
+  }
+  .toggle-menu{
+    display: inline;
+    cursor: pointer;
+  }
+  #toggle-menu:checked + .menu__list{
+    display: block;
+  }
 }
