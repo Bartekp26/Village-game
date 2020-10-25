@@ -1,6 +1,6 @@
 <?php require("game.php"); ?>
-<div class="townhall">
-  <h2 class="townhall__title">Town hall</h2>
+<div class="table">
+  <h2 class="table__title">Town hall</h2>
   <div class="buildings_container">
     <?php   
       require "phpmysqlconnect.php";

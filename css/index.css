@@ -249,7 +249,7 @@ body {
 body {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/img/background.png"); }
 
-.townhall {
+.table {
   margin: 0 auto;
   max-width: 750px;
   min-height: 90vh;
@@ -259,7 +259,7 @@ body {
   border-right: 1px #80f4e8 solid;
   border-left: 1px #80f4e8 solid;
   color: white; }
-  .townhall__title {
+  .table__title {
     text-align: center;
     margin: 0;
     padding: 20px;
@@ -318,3 +318,12 @@ body {
     color: red;
     top: 85px;
     left: 25%; }
+
+.about {
+  margin: 50px 80px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 22px; }
+  .about__element {
+    margin-bottom: 75px; }
+  .about__title {
+    margin: 0px; }

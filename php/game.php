@@ -24,6 +24,7 @@
           $menuList=array(
             'Home' => 'game.php',
             'Town hall' => 'townhall.php',
+            'About' => 'about.php',
           );   
       
           foreach ($menuList as $title => $url) {
