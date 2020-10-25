@@ -22,7 +22,7 @@
         <?php
           $currentPage = basename($_SERVER['SCRIPT_FILENAME']);
           $menuList=array(
-            'Home' => 'game.php',
+            'Home' => 'home.php',
             'Town hall' => 'townhall.php',
             'About' => 'about.php',
           );   

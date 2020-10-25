@@ -1,0 +1,44 @@
+body{
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/img/background.png");
+}
+
+.table{
+  margin: 0 auto;
+  max-width: 750px;
+  min-height: 90vh;
+  background-color: $darkenBasicColor;
+  opacity: 0.8;
+  font-family: $sansProFont;
+  border-right: 1px $lightenBasicColor solid;
+  border-left: 1px $lightenBasicColor solid;
+  color: white;
+
+  &__title{
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    color: white;
+    font-size: 32px;
+    letter-spacing: 1px;
+    border-bottom: 4px $lightenBasicColor dotted;
+  }
+}
+
+.informations{
+  margin: 50px 80px;
+  font-family: $sansProFont;
+  font-size: 24px;
+
+  &__container{
+    margin-bottom: 40px;
+  }
+}
+
+.information{
+  padding: 10px;
+
+  &__span{
+    margin-left: 15px;
+    font-weight: 700;
+  }
+}

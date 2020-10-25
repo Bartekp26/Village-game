@@ -15,7 +15,7 @@
       $_SESSION["logged"] = true;
       $_SESSION["id"] = $user["id"];
       unset($_SESSION["incorrect"]);
-      header("Location: game.php");
+      header("Location: home.php");
     } else {
       $_SESSION["incorrect"] = "Incorrect username or password";
       header("Location: ../index.php");
