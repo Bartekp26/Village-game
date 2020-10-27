@@ -357,10 +357,6 @@ body {
     width: 200px;
     color: white; } }
 
-@media only screen and (max-width: 660px) {
-  .minerals {
-    top: 3.5%; } }
-
 .buildings_container {
   margin: 30px 70px;
   font-family: "Roboto", sans-serif; }
@@ -412,15 +408,6 @@ body {
     top: 85px;
     left: 25%; }
 
-.about {
-  margin: 50px 80px;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 22px; }
-  .about__element {
-    margin-bottom: 75px; }
-  .about__title {
-    margin: 0px; }
-
 @media only screen and (max-width: 1150px) {
   .table {
     max-width: 600px; }
@@ -466,3 +453,12 @@ body {
   .building__error {
     font-size: 18px;
     top: 75px; } }
+
+.about {
+  margin: 50px 80px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 22px; }
+  .about__element {
+    margin-bottom: 75px; }
+  .about__title {
+    margin: 0px; }
