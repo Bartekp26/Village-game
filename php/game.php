@@ -3,6 +3,22 @@
 
   if($_SESSION["logged"]){
     $user_id = $_SESSION["id"];
+    require "phpmysqlconnect.php";
+
+    $query = "SELECT last_update FROM villages WHERE owner_id = $user_id";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+    $lastUpdate = $stmt->fetch(PDO::FETCH_ASSOC)["last_update"];
+
+    $LastUpdateDate = new DateTime($lastUpdate);
+    $PresentDate = new DateTime();
+
+    $diff = $PresentDate->diff($LastUpdateDate);
+    $interval = (((($diff->y * 365.25 + $diff->m * 30 + $diff->d) * 24 + $diff->h) * 60 + $diff->i)*60 + $diff->s)/60;
+
+    if($interval >= 2){
+      header("Location: addMinerals.php");
+    }
   } else {
     header("Location: ../index.php");
   }

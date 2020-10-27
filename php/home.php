@@ -1,4 +1,4 @@
-<?php require("game.php"); ?>
+<?php require("game.php");?>
 <div class="table">
   <h2 class="table__title">Village Informations</h2>
   <div class="informations">
