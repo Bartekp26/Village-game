@@ -6,7 +6,8 @@
     $email = filter_input(INPUT_POST, "email");
     $password = filter_input(INPUT_POST, "password");
     $repeatPassword = filter_input(INPUT_POST, "repeat-password");
-
+    require "phpmysqlconnect.php";
+    
     # Passwords validation
     if(!empty($password)){
       if(strlen($password) < 8){
@@ -42,13 +43,23 @@
       $error = "Username must be alphanumeric &<br>4 to 24 chars long";
     }
 
+    $query = "SELECT username FROM users";
+    $stmt = $pdo->prepare($query);
+    $stmt->execute();
+    $users = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+    foreach($users as $user){
+      if(strtolower($user["username"]) === strtolower($username)){
+        $flag = false;
+        $error = "This username is already in database";
+      }
+    }
+
     if($flag){
       $username = htmlspecialchars($username);
       $email = htmlspecialchars($email);
       $password = htmlspecialchars($password);
       $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-      require "phpmysqlconnect.php";
 
       $query = "INSERT INTO users (username,email,password) VALUES (?,?,?)";
       $stmt = $pdo->prepare($query)->execute([$username,$email,$hashedPassword]);
